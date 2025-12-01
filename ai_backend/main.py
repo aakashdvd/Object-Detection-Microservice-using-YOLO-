@@ -8,7 +8,7 @@ import base64
 
 app = FastAPI(title="AI Backend - YOLO Object Detection")
 
-# Load lightweight YOLO model once at startup
+# To Load lightweight YOLO model once at startup
 model = YOLO("yolov8n.pt")  # ultralytics will download if not present
 
 
@@ -100,5 +100,5 @@ async def detect_objects_with_image(file: UploadFile = File(...)):
 
 
 if __name__ == "__main__":
-    # For local dev (not used in Docker, but nice to keep)
+    # For local dev 
     uvicorn.run("main:app", host="0.0.0.0", port=8001, reload=True)

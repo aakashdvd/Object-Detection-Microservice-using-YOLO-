@@ -24,6 +24,6 @@ Thumbs.db
 # Docker
 *.pid
 
-# Model weights (if they ever end up here)
+# Model weights 
 *.pt
 runs/

@@ -4,7 +4,6 @@ WORKDIR /app
 
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
-# NEW: install python-multipart for FastAPI File/UploadFile
 RUN pip install python-multipart
 
 # System libs for OpenCV (libGL.so.1 etc.)
