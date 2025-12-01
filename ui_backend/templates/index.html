@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>YOLO Object Detection</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        background: #0f172a;
+        color: #e5e7eb;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+      }
+      .container {
+        width: 100%;
+        max-width: 700px;
+        padding: 24px;
+      }
+      .card {
+        background: #020617;
+        border-radius: 16px;
+        padding: 24px 24px 28px 24px;
+        box-shadow: 0 20px 45px rgba(0,0,0,0.6);
+        border: 1px solid #1f2937;
+      }
+      h1 {
+        margin-top: 0;
+        margin-bottom: 8px;
+        font-size: 24px;
+        color: #f9fafb;
+      }
+      p.subtitle {
+        margin-top: 0;
+        margin-bottom: 20px;
+        font-size: 14px;
+        color: #9ca3af;
+      }
+      .upload-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        align-items: center;
+        margin-top: 16px;
+      }
+      input[type="file"] {
+        flex: 1 1 auto;
+        color: #e5e7eb;
+      }
+      button {
+        background: #22c55e;
+        color: #022c22;
+        font-weight: 600;
+        border: none;
+        border-radius: 999px;
+        padding: 10px 18px;
+        cursor: pointer;
+        transition: transform 0.1s ease, box-shadow 0.1s ease, background 0.15s ease;
+      }
+      button:hover {
+        background: #16a34a;
+        box-shadow: 0 10px 25px rgba(34,197,94,0.4);
+        transform: translateY(-1px);
+      }
+      button:active {
+        transform: translateY(0);
+        box-shadow: none;
+      }
+      .footer {
+        margin-top: 16px;
+        font-size: 12px;
+        color: #6b7280;
+      }
+      @media (max-width: 600px) {
+        .card { padding: 18px 16px 22px 16px; }
+        h1 { font-size: 20px; }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="card">
+        <h1>YOLO Object Detection</h1>
+        <p class="subtitle">
+          Upload an image and the backend microservice will run YOLOv8 and return detections.
+        </p>
+        <form action="/upload" method="post" enctype="multipart/form-data">
+          <div class="upload-row">
+            <input type="file" name="file" accept="image/*" required />
+            <button type="submit">Detect</button>
+          </div>
+        </form>
+        <div class="footer">
+          UI backend → AI backend (YOLO) → JSON + annotated image 🤖
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

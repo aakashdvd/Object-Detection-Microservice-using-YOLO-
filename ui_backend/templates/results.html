@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Detection Results</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        background: #020617;
+        color: #e5e7eb;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        min-height: 100vh;
+      }
+      .container {
+        width: 100%;
+        max-width: 900px;
+        padding: 24px 16px 32px 16px;
+      }
+      .card {
+        background: #020617;
+        border-radius: 16px;
+        padding: 22px 22px 26px 22px;
+        box-shadow: 0 22px 50px rgba(0,0,0,0.7);
+        border: 1px solid #1f2937;
+      }
+      h1 {
+        margin-top: 0;
+        margin-bottom: 6px;
+        font-size: 24px;
+        color: #f9fafb;
+      }
+      .meta {
+        font-size: 13px;
+        color: #9ca3af;
+        margin-bottom: 16px;
+      }
+      .tabs {
+        display: inline-flex;
+        border-radius: 999px;
+        background: #020617;
+        border: 1px solid #1f2937;
+        padding: 3px;
+        margin-top: 8px;
+        margin-bottom: 16px;
+      }
+      .tab-btn {
+        border-radius: 999px;
+        border: none;
+        padding: 6px 14px;
+        font-size: 13px;
+        cursor: pointer;
+        background: transparent;
+        color: #9ca3af;
+        transition: background 0.15s ease, color 0.15s ease;
+      }
+      .tab-btn.active {
+        background: #111827;
+        color: #e5e7eb;
+      }
+      pre {
+        background: #020617;
+        border-radius: 12px;
+        padding: 14px;
+        font-size: 12px;
+        overflow-x: auto;
+        border: 1px solid #1f2937;
+        max-height: 500px;
+      }
+      .tab-content {
+        margin-top: 8px;
+      }
+      .back-link {
+        display: inline-flex;
+        align-items: center;
+        margin-top: 18px;
+        font-size: 13px;
+        color: #9ca3af;
+        text-decoration: none;
+      }
+      .back-link span {
+        margin-left: 4px;
+      }
+      img.annotated {
+        max-width: 100%;
+        border-radius: 12px;
+        border: 1px solid #1f2937;
+      }
+    </style>
+    <script>
+      function showTab(tab) {
+        const jsonTab = document.getElementById("json-tab");
+        const imageTab = document.getElementById("image-tab");
+        const jsonBtn = document.getElementById("json-btn");
+        const imageBtn = document.getElementById("image-btn");
+        if (tab === "json") {
+          jsonTab.style.display = "block";
+          imageTab.style.display = "none";
+          jsonBtn.classList.add("active");
+          imageBtn.classList.remove("active");
+        } else {
+          jsonTab.style.display = "none";
+          imageTab.style.display = "block";
+          jsonBtn.classList.remove("active");
+          imageBtn.classList.add("active");
+        }
+      }
+      window.addEventListener("load", function () {
+        showTab("json");
+      });
+    </script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="card">
+        <h1>Detection Results</h1>
+
+        <div class="meta">
+          <div><strong>File:</strong> {{ file_name }}</div>
+          <div><strong>Image size:</strong> {{ img_width }} × {{ img_height }} px</div>
+          <div><strong>Detections:</strong> {{ num_detections }}</div>
+        </div>
+
+        <div class="tabs">
+          <button id="json-btn" class="tab-btn active" type="button" onclick="showTab('json')">
+            JSON
+          </button>
+          <button id="image-btn" class="tab-btn" type="button" onclick="showTab('image')">
+            Annotated Image
+          </button>
+        </div>
+
+        <div id="json-tab" class="tab-content">
+          <pre>{{ formatted_json }}</pre>
+        </div>
+
+        <div id="image-tab" class="tab-content" style="display:none;">
+          {% if annotated_image_url %}
+            <img class="annotated" src="{{ annotated_image_url }}" alt="Annotated detection image" />
+          {% else %}
+            <p>No annotated image returned from backend.</p>
+          {% endif %}
+        </div>
+
+        <a href="/" class="back-link">
+          ← <span>Upload another image</span>
+        </a>
+      </div>
+    </div>
+  </body>
+</html>
