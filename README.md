@@ -1,4 +1,4 @@
-Object Detection Using YOLOv8 (FastAPI + Docker Microservices)
+**Object Detection Using YOLOv8 (FastAPI + Docker Microservices)**
 
 This project implements a simple microservice-based object detection system using FastAPI, Ultralytics YOLOv8, and Docker.
 Users can upload an image through a web UI, and the system returns:
