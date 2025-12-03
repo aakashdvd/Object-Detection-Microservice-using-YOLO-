@@ -1,4 +1,4 @@
-**Object Detection Using YOLOv8 (FastAPI + Docker Microservices)**
+# Object Detection Using YOLOv8 (FastAPI + Docker Microservices)
 
 This project implements a simple microservice-based object detection system using FastAPI, Ultralytics YOLOv8, and Docker.
 Users can upload an image through a web UI, and the system returns:
@@ -7,7 +7,7 @@ JSON detection results
 
 An annotated image with bounding boxes
 
-🚀 Features
+## 🚀 Features
 
 YOLOv8 object detection (Ultralytics)
 
@@ -19,7 +19,8 @@ Clean browser interface for uploading images
 
 JSON output + annotated image preview
 
-📁 Project Structure
+## 📁 Project Structure
+```
 Object-Detection-YOLO/
 │
 ├── docker-compose.yml
@@ -36,8 +37,9 @@ Object-Detection-YOLO/
     ├── main.py
     ├── Dockerfile
     └── requirements.txt
+```
 
-🛠️ Requirements
+## 🛠️ Requirements
 
 Before running the project, install:
 
@@ -45,13 +47,13 @@ Docker Desktop → https://www.docker.com/products/docker-desktop
 
 (Optional) Git → https://git-scm.com/
 
-📥 Setup & Run
-1️⃣ Clone the Repository
-git clone https://github.com/aakashdvd/Object-Detection-YOLO.git
-cd Object-Detection-YOLO
+## 📥 Setup & Run
+### 1️⃣ Clone the Repository
+`` git clone https://github.com/aakashdvd/Object-Detection-YOLO.git
+    cd Object-Detection-YOLO``
 
-2️⃣ Build and Run the Services
-docker compose up --build
+### 2️⃣ Build and Run the Services
+``docker compose up --build``
 
 
 This starts:
@@ -62,7 +64,7 @@ AI Backend → http://localhost:8001
 
 Model weights download automatically on first run.
 
-3️⃣ Use the Application
+## 3️⃣ Use the Application
 
 Open your browser and visit:
 
@@ -77,8 +79,8 @@ JSON detection output
 
 Annotated image
 
-4️⃣ Stop the Application
+## 4️⃣ Stop the Application
 
 Press CTRL + C, then run:
 
-docker compose down
+``docker compose down``
