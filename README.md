@@ -64,7 +64,7 @@ AI Backend → http://localhost:8001
 
 Model weights download automatically on first run.
 
-## 3️⃣ Use the Application
+### 3️⃣ Use the Application
 
 Open your browser and visit:
 
@@ -79,7 +79,7 @@ JSON detection output
 
 Annotated image
 
-## 4️⃣ Stop the Application
+### 4️⃣ Stop the Application
 
 Press CTRL + C, then run:
 
