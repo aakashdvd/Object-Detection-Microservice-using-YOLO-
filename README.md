@@ -49,8 +49,8 @@ Docker Desktop → https://www.docker.com/products/docker-desktop
 
 ## 📥 Setup & Run
 ### 1️⃣ Clone the Repository
-`` git clone https://github.com/aakashdvd/Object-Detection-YOLO.git
-    cd Object-Detection-YOLO``
+` git clone https://github.com/aakashdvd/Object-Detection-YOLO.git`<br>
+`cd Object-Detection-YOLO`
 
 ### 2️⃣ Build and Run the Services
 ``docker compose up --build``
@@ -71,7 +71,7 @@ Open your browser and visit:
 http://localhost:8000
 
 
-Upload an image
+<ins>Upload an image</ins>
 
 View:
 
@@ -81,6 +81,6 @@ Annotated image
 
 ### 4️⃣ Stop the Application
 
-Press CTRL + C, then run:
+Press `CTRL + C`, then run:
 
 ``docker compose down``
