@@ -1,16 +1,16 @@
 {
   "project": "Object-Detection-Microservice-YOLO",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "last_updated": "2025-12-06",
   "author": "aakashdvd",
   "description": "YOLOv8-based object detection microservice with FastAPI and Docker",
-  "build_number": 2,
+  "build_number": 3,
   "status": "development",
   "metrics": {
-    "inference_time_ms": 44.7,
-    "mAP_50": 0.654,
+    "inference_time_ms": 44.4,
+    "mAP_50": 0.658,
     "model_size_mb": 25.4,
-    "supported_classes": 21
+    "supported_classes": 22
   },
-  "changelog_entry": "feat: add response compression for large payloads"
+  "changelog_entry": "fix: prevent duplicate detection entries in response"
 }
