@@ -1,16 +1,16 @@
 {
   "project": "Object-Detection-Microservice-YOLO",
-  "version": "0.1.8",
+  "version": "0.1.9",
   "last_updated": "2025-12-07",
   "author": "aakashdvd",
   "description": "YOLOv8-based object detection microservice with FastAPI and Docker",
-  "build_number": 9,
+  "build_number": 10,
   "status": "development",
   "metrics": {
-    "inference_time_ms": 42.6,
-    "mAP_50": 0.682,
+    "inference_time_ms": 42.3,
+    "mAP_50": 0.686,
     "model_size_mb": 25.4,
-    "supported_classes": 28
+    "supported_classes": 29
   },
-  "changelog_entry": "refactor: move configuration to pydantic settings"
+  "changelog_entry": "fix: handle zero-byte image uploads"
 }
