@@ -1,16 +1,16 @@
 {
   "project": "Object-Detection-Microservice-YOLO",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "last_updated": "2025-12-08",
   "author": "aakashdvd",
   "description": "YOLOv8-based object detection microservice with FastAPI and Docker",
-  "build_number": 13,
+  "build_number": 14,
   "status": "development",
   "metrics": {
-    "inference_time_ms": 41.4,
-    "mAP_50": 0.698,
+    "inference_time_ms": 41.1,
+    "mAP_50": 0.702,
     "model_size_mb": 25.4,
-    "supported_classes": 32
+    "supported_classes": 33
   },
-  "changelog_entry": "docs: add API response schema documentation"
+  "changelog_entry": "fix: correct bounding box coordinate scaling"
 }
