@@ -1,16 +1,16 @@
 {
   "project": "Object-Detection-Microservice-YOLO",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "last_updated": "2025-12-08",
   "author": "aakashdvd",
   "description": "YOLOv8-based object detection microservice with FastAPI and Docker",
-  "build_number": 12,
+  "build_number": 13,
   "status": "development",
   "metrics": {
-    "inference_time_ms": 41.7,
-    "mAP_50": 0.694,
+    "inference_time_ms": 41.4,
+    "mAP_50": 0.698,
     "model_size_mb": 25.4,
-    "supported_classes": 31
+    "supported_classes": 32
   },
-  "changelog_entry": "perf: implement connection pooling for backend services"
+  "changelog_entry": "docs: add API response schema documentation"
 }
