@@ -1,16 +1,16 @@
 {
   "project": "Object-Detection-Microservice-YOLO",
-  "version": "0.2.5",
-  "last_updated": "2025-12-09",
+  "version": "0.2.6",
+  "last_updated": "2025-12-10",
   "author": "aakashdvd",
   "description": "YOLOv8-based object detection microservice with FastAPI and Docker",
-  "build_number": 16,
+  "build_number": 17,
   "status": "development",
   "metrics": {
-    "inference_time_ms": 40.5,
-    "mAP_50": 0.71,
+    "inference_time_ms": 40.2,
+    "mAP_50": 0.714,
     "model_size_mb": 25.4,
-    "supported_classes": 35
+    "supported_classes": 36
   },
-  "changelog_entry": "fix: handle malformed image uploads gracefully"
+  "changelog_entry": "test: add detection accuracy benchmarks on COCO"
 }
