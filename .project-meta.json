@@ -1,16 +1,16 @@
 {
   "project": "Object-Detection-Microservice-YOLO",
-  "version": "0.2.7",
-  "last_updated": "2025-12-10",
+  "version": "0.2.8",
+  "last_updated": "2025-12-11",
   "author": "aakashdvd",
   "description": "YOLOv8-based object detection microservice with FastAPI and Docker",
-  "build_number": 18,
+  "build_number": 19,
   "status": "development",
   "metrics": {
-    "inference_time_ms": 39.9,
-    "mAP_50": 0.718,
+    "inference_time_ms": 39.6,
+    "mAP_50": 0.722,
     "model_size_mb": 25.4,
-    "supported_classes": 37
+    "supported_classes": 38
   },
-  "changelog_entry": "test: add load testing with concurrent requests"
+  "changelog_entry": "perf: reduce Docker image size with alpine base"
 }
