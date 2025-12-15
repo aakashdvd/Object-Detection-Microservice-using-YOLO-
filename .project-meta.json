@@ -1,16 +1,16 @@
 {
   "project": "Object-Detection-Microservice-YOLO",
-  "version": "0.3.9",
-  "last_updated": "2025-12-13",
+  "version": "0.4.0",
+  "last_updated": "2025-12-15",
   "author": "aakashdvd",
   "description": "YOLOv8-based object detection microservice with FastAPI and Docker",
-  "build_number": 30,
+  "build_number": 31,
   "status": "development",
   "metrics": {
-    "inference_time_ms": 36.3,
-    "mAP_50": 0.766,
+    "inference_time_ms": 36.0,
+    "mAP_50": 0.77,
     "model_size_mb": 25.4,
-    "supported_classes": 49
+    "supported_classes": 50
   },
-  "changelog_entry": "docs: add model configuration guide"
+  "changelog_entry": "feat: implement graceful shutdown handling"
 }
