@@ -1,16 +1,16 @@
 {
   "project": "Object-Detection-Microservice-YOLO",
-  "version": "0.4.7",
+  "version": "0.4.8",
   "last_updated": "2025-12-18",
   "author": "aakashdvd",
   "description": "YOLOv8-based object detection microservice with FastAPI and Docker",
-  "build_number": 38,
+  "build_number": 39,
   "status": "development",
   "metrics": {
-    "inference_time_ms": 33.9,
-    "mAP_50": 0.798,
+    "inference_time_ms": 33.6,
+    "mAP_50": 0.802,
     "model_size_mb": 25.4,
-    "supported_classes": 57
+    "supported_classes": 58
   },
-  "changelog_entry": "feat: support multiple image formats (PNG, JPEG, BMP)"
+  "changelog_entry": "refactor: consolidate image preprocessing utilities"
 }
