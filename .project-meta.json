@@ -1,16 +1,16 @@
 {
   "project": "Object-Detection-Microservice-YOLO",
-  "version": "0.6.1",
+  "version": "0.6.2",
   "last_updated": "2025-12-22",
   "author": "aakashdvd",
   "description": "YOLOv8-based object detection microservice with FastAPI and Docker",
-  "build_number": 52,
+  "build_number": 53,
   "status": "development",
   "metrics": {
-    "inference_time_ms": 29.7,
-    "mAP_50": 0.854,
+    "inference_time_ms": 29.4,
+    "mAP_50": 0.858,
     "model_size_mb": 25.4,
-    "supported_classes": 71
+    "supported_classes": 72
   },
-  "changelog_entry": "fix: resolve model reload deadlock on config change"
+  "changelog_entry": "refactor: simplify error handling with custom exceptions"
 }
