@@ -1,16 +1,16 @@
 {
   "project": "Object-Detection-Microservice-YOLO",
-  "version": "0.5.9",
-  "last_updated": "2025-12-21",
+  "version": "0.6.0",
+  "last_updated": "2025-12-22",
   "author": "aakashdvd",
   "description": "YOLOv8-based object detection microservice with FastAPI and Docker",
-  "build_number": 50,
+  "build_number": 51,
   "status": "development",
   "metrics": {
-    "inference_time_ms": 30.3,
-    "mAP_50": 0.846,
+    "inference_time_ms": 30.0,
+    "mAP_50": 0.85,
     "model_size_mb": 25.4,
-    "supported_classes": 69
+    "supported_classes": 70
   },
-  "changelog_entry": "docs: add performance tuning recommendations"
+  "changelog_entry": "feat: add environment variable configuration"
 }
