@@ -1,16 +1,16 @@
 {
   "project": "Object-Detection-Microservice-YOLO",
-  "version": "0.7.2",
+  "version": "0.7.3",
   "last_updated": "2025-12-24",
   "author": "aakashdvd",
   "description": "YOLOv8-based object detection microservice with FastAPI and Docker",
-  "build_number": 63,
+  "build_number": 64,
   "status": "testing",
   "metrics": {
-    "inference_time_ms": 26.4,
-    "mAP_50": 0.898,
+    "inference_time_ms": 26.1,
+    "mAP_50": 0.902,
     "model_size_mb": 25.4,
     "supported_classes": 80
   },
-  "changelog_entry": "feat: add non-maximum suppression post-processing"
+  "changelog_entry": "style: apply black formatting to all Python files"
 }
